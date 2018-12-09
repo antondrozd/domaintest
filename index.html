@@ -9,7 +9,11 @@
         <script>
             const name = prompt('Type your name');
 
-            document.write(`Hi there, ${name}!`);
+			const h1 = document.createElement('h1');
+
+            h1.textContent = `Hi there, ${name}!`;
+
+			document.body.appendChild(h1);
         </script>
     </body>
 </html>
