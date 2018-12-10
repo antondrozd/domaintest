@@ -1,0 +1,92 @@
+body {
+    margin: 10px 0;
+}
+
+a {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.slider {
+    width: 100vw;
+    max-width: 90vh;
+    margin: auto;
+}
+
+.slide {
+    position: relative;
+    height: 100vw;
+    max-height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.slick-arrow {
+    position: absolute;
+    padding: 0;
+    z-index: 5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    font-size: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 40px;
+    height: 70px;
+    opacity: 0.3;
+    outline: none;
+    border: none;
+}
+
+.slick-prev {
+    background-image: url('../img/left-arrow.svg');
+    left: 0;
+}
+
+.slick-next {
+    background-image: url('../img/right-arrow.svg');
+    right: 0;
+}
+
+.slide-1 {
+    background-image: url('../img/vector50.svg');
+}
+
+.slide-2 {
+    background-image: url('../img/vector100.svg');
+}
+
+.slide-3 {
+    background-image: url('../img/vector200.svg');
+}
+
+.slide-4 {
+    background-image: url('../img/vector1k.svg');
+}
+
+.slide-5 {
+    background-image: url('../img/vector5k.svg');
+}
+
+.count {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.animation {
+    width: 100vw;
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.animation svg {
+    width: 100%;
+    height: auto;
+}
+
+.animation polygon {
+    opacity: 0;
+}
