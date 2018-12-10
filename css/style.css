@@ -75,9 +75,9 @@ a {
     transform: translateX(-50%);
 }
 
-.animation {
+.animation, .controls {
     width: 100vw;
-    max-width: 1024px;
+    max-width: 80vh;
     margin: auto;
     margin-top: 20px;
 }
@@ -89,4 +89,20 @@ a {
 
 .animation polygon {
     opacity: 0;
+}
+
+.animation svg g {
+    transform: scale(calc(100))
+}
+
+.controls > * {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input#duration {
+    width: 50px;
 }
