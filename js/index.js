@@ -45,13 +45,24 @@ $(document).ready(function() {
         });
     }
 
+    function toggleButton() {
+        const btn = $('.animate');
+
+        btn.prop('disabled')
+            ? btn.prop('disabled', false)
+            : btn.prop('disabled', true);
+    }
+
     $('.animate').on('click', animate);
 
     function loadSVG() {
+        toggleButton();
+
         const count = $('select').val();
 
         $('.animation').load(`/img/vector${count}.svg`, function() {
             setSVGSize();
+            toggleButton();
         });
     }
 
