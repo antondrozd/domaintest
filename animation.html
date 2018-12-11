@@ -23,6 +23,7 @@
             src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
         ></script>
         <link rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="js/global.js" ></script>
     </head>
     <body>
         <div class="animation"></div>
@@ -30,7 +31,7 @@
             <div>
                 <label
                     >Triangles count:
-                    <select></select
+                    <select id="count"></select
                 ></label>
             </div>
             <div>
@@ -45,9 +46,11 @@
                 >
             </div>
             <button class="animate">Animate it!</button>
+            <button class="link">Click to get the link with current settings</button>
+            <div class="link-container"></div>
         </div>
         <a href="/">Home</a>
 
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/animation.js"></script>
     </body>
 </html>

@@ -95,7 +95,7 @@ a {
     transform: scale(calc(100))
 }
 
-.controls > * {
+.controls > *, .link-container input {
     display: block;
     width: 75%;
     margin: 0 auto;
