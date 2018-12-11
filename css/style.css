@@ -9,82 +9,82 @@ a {
 }
 
 .slider {
-    width: 100vw;
-    max-width: 90vh;
     margin: auto;
+    max-width: 90vh;
+    width: 100vw;
 }
 
 .slide {
-    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 100vw;
     max-height: 90vh;
-    background-size: contain;
-    background-repeat: no-repeat;
+    position: relative;
 }
 
 .slick-arrow {
-    position: absolute;
-    padding: 0;
-    z-index: 5;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
     font-size: 0;
-    transform: translateY(-50%);
-    top: 50%;
-    width: 40px;
     height: 70px;
     opacity: 0.3;
     outline: none;
-    border: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 5;
 }
 
 .slick-prev {
-    background-image: url('../img/left-arrow.svg');
+    background-image: url("../img/left-arrow.svg");
     left: 0;
 }
 
 .slick-next {
-    background-image: url('../img/right-arrow.svg');
+    background-image: url("../img/right-arrow.svg");
     right: 0;
 }
 
 .slide-1 {
-    background-image: url('../img/vector50.svg');
+    background-image: url("../img/vector50.svg");
 }
 
 .slide-2 {
-    background-image: url('../img/vector100.svg');
+    background-image: url("../img/vector100.svg");
 }
 
 .slide-3 {
-    background-image: url('../img/vector200.svg');
+    background-image: url("../img/vector200.svg");
 }
 
 .slide-4 {
-    background-image: url('../img/vector1000.svg');
+    background-image: url("../img/vector1000.svg");
 }
 
 .slide-5 {
-    background-image: url('../img/vector5000.svg');
+    background-image: url("../img/vector5000.svg");
 }
 
 .count {
-    position: absolute;
     left: 50%;
+    position: absolute;
     transform: translateX(-50%);
 }
 
 .animation, .controls {
-    width: 100vw;
-    max-width: 80vh;
     margin: auto;
     margin-top: 20px;
+    max-width: 80vh;
+    width: 100vw;
 }
 
 .animation svg {
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 .animation polygon {
@@ -92,15 +92,15 @@ a {
 }
 
 .animation svg g {
-    transform: scale(calc(100))
+    transform: scale(calc(100));
 }
 
 .controls > *, .link-container input {
     display: block;
-    width: 75%;
     margin: 0 auto;
     margin-bottom: 10px;
     text-align: center;
+    width: 75%;
 }
 
 input#duration {

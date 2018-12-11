@@ -10,12 +10,6 @@ $(document).ready(function() {
         const appereanceSpeed = 10;
 
         $('.animation polygon').each(function() {
-            $(this).css({
-                opacity: 0
-            });
-        });
-
-        $('.animation polygon').each(function() {
             $(this)
                 .delay(delay)
                 .animate(
@@ -45,6 +39,14 @@ $(document).ready(function() {
         const count = $('#count').val();
 
         $('.animation').load(`/img/vector${count}.svg`, function() {
+            $(this)
+                .find($('polygon'))
+                .each(function() {
+                    $(this).css({
+                        opacity: 0
+                    });
+                });
+
             setSVGSize();
             toggleButton();
         });
@@ -82,7 +84,7 @@ $(document).ready(function() {
         $('#duration').val(duration);
     }
 
-    function getLink() {
+    function getLinkWithParams() {
         const origin = window.location.origin;
         const pathname = window.location.pathname;
 
@@ -96,10 +98,23 @@ $(document).ready(function() {
 
     $('.link').on('click', function() {
         const container = $('.link-container');
-        const link = getLink();
+        const link = getLinkWithParams();
 
         container.html(`<input type="text" value="${link}">`);
         container.find($('input')).select();
+        document.execCommand('copy');
+
+        $('<span>Copied to clipboard!</span>')
+            .appendTo(container)
+            .animate(
+                {
+                    opacity: 0
+                },
+                700,
+                function() {
+                    $(this).remove();
+                }
+            );
     });
 
     const params = getParamsFromURL();
