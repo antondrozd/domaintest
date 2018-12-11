@@ -101,19 +101,19 @@ $(document).ready(function() {
         const link = getLinkWithParams();
 
         container.html(`<input type="text" value="${link}">`);
-        container.find($('input')).select();
+
+        const input = container.find($('input'));
+
+        input.select();
         document.execCommand('copy');
 
         $('<span>Copied to clipboard!</span>')
-            .appendTo(container)
+            .insertBefore(input)
             .animate(
                 {
                     opacity: 0
                 },
-                700,
-                function() {
-                    $(this).remove();
-                }
+                700
             );
     });
 
